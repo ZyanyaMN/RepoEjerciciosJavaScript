@@ -50,10 +50,19 @@ function numeroDivisibleUno (numero) {
 function numeroDivisibleDos (numero) {
     division1= numero % 4;
     division2= numero % 9;
-    if(division1 == 0 && division2 == 0){
-        console.log("Verdadero. El número es divisible entre 7 y entre 8");
+    if(division1 == 0 || division2 == 0){
+        console.log("Verdadero. El número es divisible entre 4 o entre 9");
+        if(division1 == 0 && division2 == 0){
+            console.log("El número es divisible entre 4 y entre 9");
+        } else if (division1 == 0) {
+            console.log("El número es divisible solo entre 4");
+        }
+        else{
+            console.log("El número es divisible solo entre 9");
+        }
     } else{
-        console.log("Falso. El número no es divisible entre 7 y entre 8");
+
+        console.log("Falso. El número no es divisible entre 4 ni entre 9");
     }
 }
 
